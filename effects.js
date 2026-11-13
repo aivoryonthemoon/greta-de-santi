@@ -10,3 +10,18 @@
  addEventListener('resize',resize,{passive:true});document.addEventListener('visibilitychange',()=>{visible=!document.hidden;start();});reduced.addEventListener('change',start);resize();start();
  for(const card of document.querySelectorAll('.tilt')){card.addEventListener('pointermove',e=>{if(reduced.matches||e.pointerType!=='mouse')return;const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;card.style.transform=`perspective(1100px) rotateX(${-y*9}deg) rotateY(${x*12}deg) translateY(-4px)`;});card.addEventListener('pointerleave',()=>card.style.transform='');}
 })();
+// Keep the main action available after the visitor scrolls past it.
+(() => {
+ const main = document.querySelector('#telegram-main');
+ const sticky = document.querySelector('.telegram-sticky');
+ if (!main || !sticky || !('IntersectionObserver' in window)) return;
+ const mobile = matchMedia('(max-width: 700px)');
+ let passed = false;
+ const update = () => { sticky.hidden = !(mobile.matches && passed); };
+ const observer = new IntersectionObserver(([entry]) => {
+   passed = !entry.isIntersecting && entry.boundingClientRect.bottom <= 0;
+   update();
+ }, { threshold: 0 });
+ observer.observe(main);
+ mobile.addEventListener('change', update);
+})();
