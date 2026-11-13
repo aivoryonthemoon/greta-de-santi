@@ -12,3 +12,23 @@ header{height:54px;gap:18px}.wordmark{font-size:20px}.wordmark span{font-size:19
 /* Telegram is the primary action. */
 .telegram-invite{font-size:16px;font-weight:600;margin:0 0 12px;color:#f2e6fb;letter-spacing:-.2px}.telegram{background:linear-gradient(110deg,#a855d8,#7043bd);border-color:#f0b5ffb0;box-shadow:0 8px 32px #b24ee540,inset 0 1px #ffffff45}.telegram-sticky{display:none}.quick-links{opacity:.8}
 @media(max-width:700px){.telegram-invite{font-size:14px;margin:0 0 10px}.hero .audience{margin-bottom:15px}.telegram{justify-content:center;text-align:left;min-height:66px}.telegram>span:not(.cta-arrow){font-size:16px}.telegram-sticky:not([hidden]){display:block;position:fixed;bottom:0;left:0;right:0;z-index:30;padding:10px 16px max(12px,env(safe-area-inset-bottom));background:linear-gradient(180deg,#09071100,#090711ee 24%);backdrop-filter:blur(10px)}.telegram-sticky .telegram{min-height:56px;border-radius:14px}.telegram-sticky img{width:28px;height:28px}.telegram-sticky .telegram>span{font-size:15px}body:has(.telegram-sticky:not([hidden])) footer{padding-bottom:110px}}
+/* Original Link.me profile palette: pink, white, blue Telegram, black cards. */
+:root{--profile-pink:#ff8fff;--profile-text:#fff;--telegram-blue:#088ff6;--card-black:#000}
+body{background:var(--profile-pink);color:var(--profile-text)}
+h1>span{background:none;color:var(--profile-text)}
+.bio,.eyebrow,.audience strong span,.audience-label,.telegram-invite,footer>span{color:var(--profile-text)}
+.status-dot{background:#fff;box-shadow:0 0 14px #fff9}
+.ambient-one,.ambient-two{background:#fff;opacity:.1}
+.telegram{background:var(--telegram-blue);color:#fff;border-color:#ffffff55;box-shadow:0 8px 25px #0002,inset 0 1px #ffffff35}
+.telegram:hover{box-shadow:0 10px 30px #0003}.telegram small{color:#fff}
+.quick-links{opacity:1}.quick-links a{background:#ffffff12;border-color:#ffffff50}.quick-links a:hover{background:#ffffff35}
+.portrait{border-color:#ffffff99;box-shadow:0 0 0 8px #ffffff15,0 20px 45px #0003}
+.portrait-glass{background:linear-gradient(180deg,transparent 55%,#ff8fff20 80%,#ff8fff80)}
+.portrait-tag{background:#0004;border-color:#ffffff80;color:#fff}
+.orbit,.orbit-two,.orbit-three{border-color:#ffffff80;box-shadow:0 0 14px #ffffff25,inset 0 0 14px #ffffff25}
+.planet,.planet-two{background:radial-gradient(circle at 28% 24%,#fff 5%,#ff8fff 45%,#000 130%);box-shadow:inset -10px -12px 22px #0002,0 0 25px #ffffff40}
+.floating-chip{background:#ff8fffcc;border-color:#ffffff80;color:#fff;box-shadow:0 12px 25px #0002}
+.social-card{background:var(--card-black);border-color:#ffffff50}.social-card:hover{border-color:#fff;box-shadow:0 12px 35px #0003}.card-shade{background:linear-gradient(180deg,#0002,transparent 35%,#000 100%)}.card-number{background:#0005}.cover{filter:none}
+footer{border-color:#ffffff50}footer>a:last-child{border-color:#ffffff70}
+a:focus-visible{outline-color:var(--telegram-blue)}
+@media(max-width:700px){.portrait{box-shadow:0 0 0 6px #ffffff15,0 15px 30px #0003}.telegram-sticky:not([hidden]){background:linear-gradient(180deg,#ff8fff00,#ff8fffef 24%)}}
