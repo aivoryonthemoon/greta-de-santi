@@ -32,3 +32,8 @@ h1>span{background:none;color:var(--profile-text)}
 footer{border-color:#ffffff50}footer>a:last-child{border-color:#ffffff70}
 a:focus-visible{outline-color:var(--telegram-blue)}
 @media(max-width:700px){.portrait{box-shadow:0 0 0 6px #ffffff15,0 15px 30px #0003}.telegram-sticky:not([hidden]){background:linear-gradient(180deg,#ff8fff00,#ff8fffef 24%)}}
+
+/* Consistent square logo assets: never stretch or crop brand marks. */
+.quick-links img,.card-label img{display:block;object-fit:contain;aspect-ratio:1;flex-shrink:0;border-radius:0}
+.card-label img{width:28px;height:28px}
+@media(max-width:700px){.card-label img{width:26px;height:26px}.card-label{gap:8px}.quick-links img{width:28px;height:28px}}
